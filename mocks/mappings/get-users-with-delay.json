@@ -1,0 +1,19 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/users?slow=true"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "fixedDelayMilliseconds": 3000,
+        "jsonBody": [
+            {
+                "id": 1,
+                "name": "Slow Response User"
+            }
+        ]
+    }
+}

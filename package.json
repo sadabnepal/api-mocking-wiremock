@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "mock:start": "wiremock --root-dir ./mocks --global-response-templating --port 8080",
+    "test": "mocha tests/**/*.spec.js --timeout 10000"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "axios": "^1.16.1",
+    "chai": "^6.2.2",
+    "mocha": "^11.7.6",
+    "wiremock": "^3.13.2"
+  }
+}

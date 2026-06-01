@@ -1,0 +1,46 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/users"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": [
+            {
+                "id": 1,
+                "name": "Leanne Graham",
+                "username": "Bret",
+                "email": "Sincere@april.biz",
+                "phone": "1-770-736-8031",
+                "website": "hildegard.org",
+                "address": {
+                    "street": "Kulas Light",
+                    "city": "Gwenborough",
+                    "zipcode": "92998-3874"
+                },
+                "company": {
+                    "name": "Romaguera-Crona"
+                }
+            },
+            {
+                "id": 2,
+                "name": "Ervin Howell",
+                "username": "Antonette",
+                "email": "Shanna@melissa.tv",
+                "phone": "010-692-6593",
+                "website": "anastasia.net",
+                "address": {
+                    "street": "Victor Plains",
+                    "city": "Wisokyburgh",
+                    "zipcode": "90566-7771"
+                },
+                "company": {
+                    "name": "Deckow-Crist"
+                }
+            }
+        ]
+    }
+}

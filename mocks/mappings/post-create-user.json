@@ -1,0 +1,34 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/users",
+        "headers": {
+            "Content-Type": {
+                "contains": "application/json"
+            }
+        },
+        "bodyPatterns": [
+            {
+                "matchesJsonPath": "$.name"
+            },
+            {
+                "matchesJsonPath": "$.email"
+            }
+        ]
+    },
+    "response": {
+        "status": 201,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "id": 11,
+            "name": "{{jsonPath request.body '$.name'}}",
+            "email": "{{jsonPath request.body '$.email'}}",
+            "createdAt": "2025-01-01T00:00:00Z"
+        },
+        "transformers": [
+            "response-template"
+        ]
+    }
+}
