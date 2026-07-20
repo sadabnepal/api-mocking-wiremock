@@ -75,22 +75,22 @@ npm test
 
 ## Available endpoints
 
-| Method | URL | Description |
-|--------|-----|-------------|
-| `GET` | `/users` | Returns a list of dynamically generated users |
-| `GET` | `/users/:id` | Returns a single user — ID is reflected in response |
-| `GET` | `/users/999` | Returns a `404` not found response |
-| `GET` | `/users?slow=true` | Returns users after a 3 second simulated delay |
-| `POST` | `/users` | Creates a user — echoes `name` and `email` from request body |
+| Method | URL                | Description                                                  |
+|--------|--------------------|--------------------------------------------------------------|
+| `GET`  | `/users`           | Returns a list of dynamically generated users                |
+| `GET`  | `/users/:id`       | Returns a single user - Id is reflected in response          |
+| `GET`  | `/users/999`       | Returns a `404` not found response                           |
+| `GET`  | `/users?slow=true` | Returns users after a 3 second simulated delay               |
+| `POST` | `/users`           | Creates a user — echoes `name` and `email` from request body |
 
 ---
 
 ## npm scripts
 
-| Script | Command | Description |
-|--------|---------|-------------|
+| Script       | Command                                                                    | Description            |
+|--------------|----------------------------------------------------------------------------|------------------------|
 | `mock:start` | `npx wiremock --port 8080 --root-dir ./mocks --global-response-templating` | Starts WireMock server |
-| `test` | `mocha tests/**/*.spec.js --timeout 10000` | Runs the test suite |
+| `test`       | `mocha tests/**/*.spec.js --timeout 10000`                                 | Runs the test suite    |
 
 ---
 
@@ -112,14 +112,14 @@ Test → GET /users/42
 
 ### Template helpers used
 
-| Helper | Example | Result |
-|--------|---------|--------|
-| `urlPathSegments.[N]` | `{{urlPathSegments.[1]}}` | `42` from `/users/42` |
-| `randomValue` | `type='ALPHABETICAL'` | Random letters |
-| `randomValue` | `type='ALPHANUMERIC'` | Random letters and numbers |
-| `randomValue` | `type='NUMERIC'` | Random digits |
-| `jsonPath` | `{{jsonPath request.body '$.name'}}` | Echoes a POST body field |
-| `now` | `{{now format='yyyy-MM-dd'}}` | Current date |
+| Helper                | Example                              | Result                              |
+|-----------------------|--------------------------------------|-------------------------------------|
+| `urlPathSegments.[N]` | `{{urlPathSegments.[1]}}`            | `42` from `/users/42`               |
+| `randomValue`         | `type='ALPHABETICAL'`                | Random letters                      |
+| `randomValue`         | `type='ALPHANUMERIC'`                | Random letters and numbers          |
+| `randomValue`         | `type='NUMERIC'`                     | Random digits                       |
+| `jsonPath`            | `{{jsonPath request.body '$.name'}}` | Echoes a POST body field            |
+| `now`                 | `{{now format='yyyy-MM-dd'}}`        | Current date                        |
 
 ---
 
